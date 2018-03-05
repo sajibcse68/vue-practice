@@ -20,7 +20,6 @@ export const loadData = ({ commit }) => {
         };
 
         console.log('commit: ', commit);
-        debugger;
         commit('SET_STOCKS', stocks);
         commit('SET_PORTFOLIO', portfolio);
       }

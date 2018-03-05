@@ -68,6 +68,7 @@ const router = new Router({
       ]
     },
     { path: '/vuex', name: 'vuex', component: Vuex },
+
     { path: '/stocks',
       component: StockRoot,
       children: [
@@ -76,6 +77,7 @@ const router = new Router({
         { path: 'stocks', name: 'StockStocks', component: StockStocks }
       ]
     },
+
     { path: '/redirect-me', redirect: '/user' },
     { path: '*', redirect: '/' }
   ],
