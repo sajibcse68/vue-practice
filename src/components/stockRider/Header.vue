@@ -23,7 +23,7 @@
         </div>
       </li>
 
-      <li class="nav-item">Funds: {{ funds | currency }}</li>
+      <li id="funds" class="nav-item">Funds: {{ funds | currency }}</li>
     </ul>
   </div>
 </nav>
@@ -36,7 +36,8 @@ import { mapActions } from 'vuex';
 export default {
   data () {
     return {
-      isDropdownOpen: false
+      isDropdownOpen: false,
+      TESTING: this.$route.query.TESTING || false
     };
   },
   computed: {
@@ -58,11 +59,20 @@ export default {
         stockPortfolio: this.$store.getters.stockPortfolio,
         stocks: this.$store.getters.stocks
       };
+      /*
+      if (this.TESTING) {
+        return data;
+      }
+      */
       this.$http.put('tradeRider.json', data);
     },
     loadData () {
       this.fetchData();
     }
+  },
+  created () {
+    console.log('>>>>>>>>>>TESTING: ', this.TESTING);
+    this.fetchData(this.TESTING);
   }
 };
 </script>

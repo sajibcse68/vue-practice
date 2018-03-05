@@ -33,7 +33,7 @@ module.exports = {
         javascriptEnabled: true,
         acceptSslCerts: true,
         chromeOptions: {
-          'args': ['incognito', 'disable-extensions', 'auto-open-devtools-for-tabs']
+          'args': ['incognito', 'disable-extensions'] // , 'auto-open-devtools-for-tabs'
         }
       }
     },

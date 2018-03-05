@@ -19,7 +19,6 @@ module.exports = {
 
   'test form submission': (browser) => {
     // const devServer = browser.globals.devServerURL;
-    // debugger;
 
     browser
       .url('http://localhost:8080/#/form');
